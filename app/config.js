@@ -1,5 +1,5 @@
 
-'use strict'
+'use strict';
 
 
 // Export
@@ -7,51 +7,41 @@
 module.exports = {
 
 	app: {
-		name: 'Demo',
+		name: 'Site',
+		description: 'Description',
+		domain: 'google.com',
 	},
 
 	use: {
-		templates: '.html',
+		templates: '.pug',
 		scripts: '.js',
-		styles: '.css',
+		styles: '.sass',
 	},
 
 	build: {
 		imagemin: [ 'png', 'jpg' ],
 		sourcemaps: [ 'js', 'css' ],
 		autoprefixer: [ 'last 3 versions', 'ie 10', 'ie 11' ],
+		pugMap: 'app/blocks/map.pug',
+		globalStyles: [ 'app/blocks/develop/app/base/variables.sass', 'app/blocks/develop/app/base/normalize.sass']
 	},
 
 	autoCreate: {
 		onlyOnWatch: true,
-		files: [ '.css' ],
+		files: [ '.sass' ],
 		levels: [ 'develop' ],
-		ignoreNodes: [ 'symbol', /_no_js/i ],
+		ignoreNodes: [ 'symbol', 'grid', 'fa', /fa-/i, /grid__/i, /_active/i, /_no_js/i ],
 	},
 
-	dist: {
-		styles: 'styles',
-		fonts: 'styles/fonts',
-		img: 'styles/img',
-		symbol: 'styles/img',
-		scripts: 'scripts',
-		static: 'static',
-		favicons: 'favicons',
-	},
-
-	favicons: {
-		android: false,
-		appleIcon: false,
-		appleStartup: false,
-		coast: false,
-		favicons: true,
-		firefox: false,
-		windows: false,
-		yandex: false,
+	addContent: {
+		page: `extends ../blocks/layout\n\nblock data\n\t-\n\t\tconst page = {\n\n\t\t\tpath: '[name]',\n\t\t\ttitle: '',\n\t\t\tdescription: '',\n\t\t\tattrs: []\n\n\t\t};\n\nblock content\n\n\n\t// GAP:Header \n\t+header\n\n`,
+		sass: '//.[name]',
+		pug: `mixin [name]()\n\n\t.[name]&attributes(attributes)\n\n\t\tblock\n`,
 	},
 
 	HTMLBeautify: {
-		preserve_newlines: false,
+		indent_with_tabs: true,
+		inline: [],
 	},
 
 }
