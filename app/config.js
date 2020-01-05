@@ -1,4 +1,3 @@
-
 'use strict';
 
 
@@ -23,7 +22,7 @@ module.exports = {
 		sourcemaps: [ 'js', 'css' ],
 		autoprefixer: [ 'last 3 versions', 'ie 10', 'ie 11' ],
 		pugMap: 'app/blocks/map.pug',
-		globalStyles: [ 'app/blocks/develop/app/base/variables.sass', 'app/blocks/develop/app/base/normalize.sass']
+		globalStyles: [ 'app/blocks/develop/app/base/variables.sass', 'app/blocks/develop/app/base/normalize.sass' ]
 	},
 
 	autoCreate: {

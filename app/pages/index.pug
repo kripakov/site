@@ -1,101 +1,83 @@
-doctype html
-head
-  meta(charset='utf-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='HandheldFriendly' content='true')
-  meta(name='MobileOptimized' content='width')
-  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  meta(name='format-detection' content='telephone=no')
-  meta(name='format-detection' content='address=no')
-  meta(name='apple-mobile-web-app-capable' content='yes')
-  meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
-  title Title
-  meta(name='description' content='Description')
-  link(rel='stylesheet' href='./styles/app.css')
-body
+include doctype/doctype.pug
+include ul/ul.pug
+include img/img.pug
+include link/link.pug
+
+body.app
   // BEMGO:symbol
-  // Header
-  .app
-    section
-      header.header
-        .nav
-          button
-          ul
-            li
-              a(href="javascript:void(#)") Features
-            li
-              a(href="javascript:void(#)") Tools
-            li
-              a(href="javascript:void(#)") How it works
-            li
-              a(href="javascript:void(#)") Pricing
-          button
-    section
-      .wrapper
-        .wrapper__left
-          .header__l The best way to increase sales of your business
-          p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-          ul
-            li
-              a(href="javascript:void(#)")
-            li
-              For information
-            li
-              button
-        .wrapper__right
+  section
+    // Header
+    header.header
+      .nav
+        button
+        +ul(['Features', 'Tools', 'How it works', 'Pricing'])(class="btn")
+        button
+  section
+    .wrapper
+      .wrapper__left
+        .header__l The best way to increase sales of your business
+        p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+        ul
+          li
+            +link
+          li
+            For information
+          li
+            button
+      .wrapper__right
+        figure
+          +img
+  section
+    .wrapper
+      .header__m The quality of our application to help you become more productive.
+      p There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+      .stream
+        .stream__el
           figure
             img(src='#' alt='The Pulpit Rock')
-    section
-      .wrapper
-        .header__m The quality of our application to help you become more productive.
-        p There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
-        .stream
-          .stream__el
+            figcaption Full Power
+          p There are many variations of passages of Lorem Ipsum available.
+        .stream__el
+          figure
+            img(src='#' alt='The Pulpit Rock')
+            figcaption Structured Code
+          p There are many variations of passages of Lorem Ipsum available.
+        .stream__el
+          figure
+            img(src='#' alt='The Pulpit Rock')
+            figcaption Installation Guide
+          p There are many variations of passages of Lorem Ipsum available.
+  section
+    .wrapper
+      .header__m Powerful application tools
+      p App Pro 1.3 update and support
+      .stream
+        .stream__el
+          div
             figure
               img(src='#' alt='The Pulpit Rock')
-              figcaption Full Power
-            p There are many variations of passages of Lorem Ipsum available.
-          .stream__el
+            .header__l User Experience
+            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+          div
             figure
               img(src='#' alt='The Pulpit Rock')
-              figcaption Structured Code
-            p There are many variations of passages of Lorem Ipsum available.
-          .stream__el
+            .header__l Concrete Security
+            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+        .stream__el
+          figure
+            img(src='#' alt='The Pulpit Rock')
+        .stream__el
+          div
             figure
               img(src='#' alt='The Pulpit Rock')
-              figcaption Installation Guide
-            p There are many variations of passages of Lorem Ipsum available.
-    section
-      .wrapper
-        .header__m Powerful application tools
-        p App Pro 1.3 update and support
-        .stream
-          .stream__el
-            div
-              figure
-                img(src='#' alt='The Pulpit Rock')
-              .header__l User Experience
-              p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-            div
-              figure
-                img(src='#' alt='The Pulpit Rock')
-              .header__l Concrete Security
-              p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-          .stream__el
+            .header__l Fast Performance
+            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+          div
             figure
               img(src='#' alt='The Pulpit Rock')
-          .stream__el
-            div
-              figure
-                img(src='#' alt='The Pulpit Rock')
-              .header__l Fast Performance
-              p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-            div
-              figure
-                img(src='#' alt='The Pulpit Rock')
-              .header__l Social Media
-              p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-    section
+            .header__l Social Media
+            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+  section
       .wrapper
         .header__m  Awarded Team, 24/7 Support
         p There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
@@ -115,7 +97,7 @@ body
               img(src='#' alt='The Pulpit Rock')
               figcaption 245
             .header__l Concrete Security
-    section
+  section
       .wrapper
         .wrapper__left
           .achievement
@@ -126,7 +108,7 @@ body
             p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
         .wrapper__right
           .slider
-    section
+  section
       .wrapper
         .wrapper__left
 
@@ -145,10 +127,45 @@ body
               a(href="javascript:void(#)")
                 img(src='#' alt='The Pulpit Rock')
           button
-    section
+  section
       .wrapper
         .stream
           .stream__el
             .plane
+              .plane__header
+                figure
+                  img(src='#' alt='The Pulpit Rock')
+                .stream
+                  .stream__el
+                    .header__l
+                    p Best for individuals
+                  .stream__el
+                    .money $20
+              .plane__body
+                ul
+                  li 2 month free user service
+                  li 24 hours support device
+                .switch
+                button
           .stream__el
+            .plane
           .stream__el
+  section
+      .wrapper
+        .wrapper__left
+          .header__l Get App Now !
+          p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+          .play
+        .wrapper__right
+          figure
+            img(src='#' alt='The Pulpit Rock')
+  section
+      .header__m Million Clients trust our service.
+      p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+      .wrapper
+        .wrapper__left
+          +ul(['Introducing Theme', 'Future', 'Plane', 'Subscribe'])
+        .wrapper__right
+          .play
+          +ul(['','','',''], 'img')(class="social")
+          

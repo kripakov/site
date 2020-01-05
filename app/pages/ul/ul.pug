@@ -1,0 +1,9 @@
+include ../link/link.pug
+
+mixin ul(items,elem)
+	ul(class!=attributes.class)
+		each item in items
+			li
+				a(href="javascript:void(#)")= item
+					if elem
+						include ../img/img.pug
