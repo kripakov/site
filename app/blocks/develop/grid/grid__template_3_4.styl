@@ -1,0 +1,26 @@
+temp = '.grid__template_3_4'
+
+{temp}
+	display grid
+	width 100%
+	grid-template-areas "header header header"\
+											"subtitle subtitle subtitle"\
+											"main main main"\
+											"spacer spacer spacer"
+	grid-template-rows 150px 140px 1fr 150px
+	// grid-template-columns 3fr
+	align-items center
+{temp} .header
+	grid-area header
+{temp} .subtitle
+	grid-area subtitle
+{temp} .main
+	grid-area main
+{temp} .spacer
+	grid-area spacer
+@media only screen and (max-width:1600px)
+	{temp}
+		grid-template-columns 0fr 4fr 2fr
+@media only screen and (max-width:1390px)
+	{temp}
+		grid-template-columns 0fr 4fr 2fr

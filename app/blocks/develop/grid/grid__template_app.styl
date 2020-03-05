@@ -1,0 +1,19 @@
+temp = '.grid__template_app'
+
+{temp}
+	display grid
+	width 100%
+	grid-template-columns 1fr 1fr
+	grid-template-rows 800px
+{temp} .grid__block_r
+	overflow hidden
+	
+@media only screen and (max-width:1600px)
+	{temp}
+		grid-template-columns 50% 40%
+@media only screen and (max-width:1440px)
+	{temp}
+		grid-template-columns 39% 40%
+@media only screen and (max-width:1200px)
+	{temp}
+		grid-template-columns 30% 40%

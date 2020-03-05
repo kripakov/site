@@ -1,0 +1,18 @@
+.grid__template_3_2
+	display grid
+	width 100%
+	grid-template-areas "header header header"\
+											"subtitle subtitle subtitle"\
+											"main main main"\
+											"spacer spacer spacer"
+	grid-template-rows 800px
+	grid-template-columns 1fr 1fr
+	align-items center
+.grid__template_3_2 .header
+	grid-area header
+.grid__template_3_2 .subtitle
+	grid-area subtitle
+.grid__template_3_2 .main
+	grid-area main
+.grid__template_3_2 .spacer
+	grid-area spacer

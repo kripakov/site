@@ -5,167 +5,418 @@ include link/link.pug
 
 body.app
   // BEMGO:symbol
+  section.options
+    .options__panel
+      .header__s Introducing Theme
+      span.options__button
   section
     // Header
-    header.header
-      .nav
-        button
-        +ul(['Features', 'Tools', 'How it works', 'Pricing'])(class="btn")
-        button
-  section
-    .wrapper
-      .wrapper__left
-        .header__l The best way to increase sales of your business
-        p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-        ul
-          li
-            +link
-          li
-            For information
-          li
-            button
-      .wrapper__right
-        figure
-          +img
-  section
-    .wrapper
-      .header__m The quality of our application to help you become more productive.
-      p There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
-      .stream
-        .stream__el
+    .grid.grid__fixed
+      header.header
+        .grid.nav
+          .grid__template_1_3
+            div.burger
+              .button.button_theme_burger
+            +ul(['Features', 'Tools', 'How it works', 'Pricing'])(class="nav__menu")
+            div.get
+              .button.button_size_m.button_theme_buy.button_type_weight
+                .button__text buy now
+  section.base
+    .grid.grid__fixed
+      .grid.grid__template_2_3
+        .grid__block_l
+          .grid.grid__align_v_center
+            .header
+              .header__l.text__up.text__l best way to 
+              .header__l.text__up.text__l increase sales of 
+              .header__l.text__up.text__l your business
+            p.text.text__l There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+            ul.nav__menu.base__station.grid__template_1_1
+              li
+                +link("javascript:void(#)",'@island/view_02.png')
+                  //- img(src='@island/view_01.png' alt='The Pulpit Rock')
+                span For information
+              li
+                .button.button_size_m.button_theme_app.button_type_weight
+                  .button__text get app
+        .grid__block_r
           figure
-            img(src='#' alt='The Pulpit Rock')
-            figcaption Full Power
-          p There are many variations of passages of Lorem Ipsum available.
-        .stream__el
-          figure
-            img(src='#' alt='The Pulpit Rock')
-            figcaption Structured Code
-          p There are many variations of passages of Lorem Ipsum available.
-        .stream__el
-          figure
-            img(src='#' alt='The Pulpit Rock')
-            figcaption Installation Guide
-          p There are many variations of passages of Lorem Ipsum available.
+            img.base__center(src='@island/ipad_02.png' alt='The Pulpit Rock')
+        .spacer
   section
-    .wrapper
-      .header__m Powerful application tools
-      p App Pro 1.3 update and support
-      .stream
-        .stream__el
-          div
+    .grid.grid__fixed
+      .grid.grid__template_3_4
+        .header.animated
+          span.header__m The quality of our application to help you become
+          span.header__m  more productive.
+        p.text.subtitle There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+        .main.stream.grid__wrapper
+          .grid.stream__el.island
             figure
-              img(src='#' alt='The Pulpit Rock')
-            .header__l User Experience
-            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-          div
+              img(src='@island/light_0.png' alt='The Pulpit Rock')
+              figcaption Full Power
+            span.text.text__c There are many variations of passages of Lorem Ipsum available.
+          .grid.stream__el.island
             figure
-              img(src='#' alt='The Pulpit Rock')
-            .header__l Concrete Security
-            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-        .stream__el
-          figure
-            img(src='#' alt='The Pulpit Rock')
-        .stream__el
-          div
+              img(src='@island/comp.png' alt='The Pulpit Rock')
+              figcaption Structured Code
+            span.text.text__c There are many variations of passages of Lorem Ipsum available.
+          .grid.stream__el.island
             figure
-              img(src='#' alt='The Pulpit Rock')
-            .header__l Fast Performance
-            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-          div
-            figure
-              img(src='#' alt='The Pulpit Rock')
-            .header__l Social Media
-            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+              img(src='@island/brilliant.png' alt='The Pulpit Rock')
+              figcaption Installation Guide
+            span.text.text__c There are many variations of passages of Lorem Ipsum available.
   section
-      .wrapper
-        .header__m  Awarded Team, 24/7 Support
-        p There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
-        .stream
-          .stream__el
-            figure
-              img(src='#' alt='The Pulpit Rock')
-              figcaption 245
-            .header__l Concrete Security
-          .stream__el
-            figure
-              img(src='#' alt='The Pulpit Rock')
-              figcaption 245
-            .header__l Concrete Security
-          .stream__el
-            figure
-              img(src='#' alt='The Pulpit Rock')
-              figcaption 245
-            .header__l Concrete Security
+    .grid.grid__fixed
+      .grid.grid__template_1_2
+        .header.header__m Powerful application tools
+        p.text.subtitle.text__c App Pro 1.3 update and support
+      .stream.main.grid__template_extra
+        .spacer
+        .grid__block_l
+          .grid__extra.left
+            figure.grid.island__end
+              img.image__s(src='@island/staff_0.png' alt='The Pulpit Rock')
+            .header__s.text__r User Experience
+            .stream__bg
+              //- img(src='@island/prop_01.png' alt='The Pulpit Rock')
+              .line
+                .line__el
+                  span
+            p.text__extra.text__r There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+          .grid__extra.left.stream__3
+            figure.grid.island__end
+              img.image__s(src='@island/lock_0.png' alt='The Pulpit Rock')
+            .header__s.text__r Concrete Security
+            .stream__bg
+              .line
+                .line__el
+                  span
+            p.text.text__r There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+        .stream__el.prop
+          figure.grid
+            img(src='@island/iphone_02.png' alt='The Pulpit Rock')
+        .grid__block_r
+          .grid__extra.right.stream__5
+            figure.grid.island__start
+              img.image__s(src='@island/production_0.png' alt='The Pulpit Rock')
+            .header__s.text__l Fast Performance
+            .stream__bg
+              .line
+                .line__el.line__right
+                  span
+            p.text.text__l There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+          .grid__extra.right.stream__7
+            figure.grid.island__start
+              img.image__s(src='@island/social_0.png' alt='The Pulpit Rock')
+            .header__s.text__l Social Media
+            .stream__bg
+              .line
+                .line__el.line__right
+                  span
+            p.text.text__l There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+  //- section
+  //-   .grid.grid__fixed
+  //-     .grid.grid__template_3_4
+  //-       .header.header__m Powerful application tools
+  //-       p.text.subtitle App Pro 1.3 update and support
+  //-       .stream.grid__wrapper.main
+  //-         .stream__el.island
+  //-           figure.grid.island__end
+  //-             img.image__s(src='@island/staff_0.png' alt='The Pulpit Rock')
+  //-           .header__s.text__r User Experience
+  //-           p.text.text__r There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+  //-           figure.grid.island__end
+  //-             img.image__s(src='@island/lock_0.png' alt='The Pulpit Rock')
+  //-           .header__s.text__r Concrete Security
+  //-           p.text.text__r There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+  //-         .stream__el.island.prop
+  //-           figure.grid
+  //-             img(src='@island/iphone_02.png' alt='The Pulpit Rock')
+  //-         .stream__el.island
+  //-           figure.grid.island__start
+  //-             img.image__s(src='@island/production_0.png' alt='The Pulpit Rock')
+  //-           .header__s.text__l Fast Performance
+  //-           p.text.text__l There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+  //-           figure.grid.island__start
+  //-             img.image__s(src='@island/social_0.png' alt='The Pulpit Rock')
+  //-           .header__s.text__l Social Media
+  //-           p.text.text__l There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
   section
-      .wrapper
-        .wrapper__left
+    .grid.wrapper
+      .wrapper__parallax(data-parallax="scroll" data-image-src="@wrapper/earth.png" data-positionX="150px")
+        //img(src='@wrapper/earth.png' alt='The Pulpit Rock')
+        .team
+          .grid.grid__template_3_4
+            .header.header__m  Awarded Team, 24/7 Support
+            p.text.subtitle There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+            .main.stream.grid__wrapper.island__center
+              .stream__el.grid__align_v_end
+                figure(id="progress_00")
+                  img(src='@island/cyber.png' alt='The Pulpit Rock')
+                  figcaption.header__xl 245
+                .header__s Communication
+              .stream__el.grid__align_v_end
+                figure(id="progress_01")
+                  img(src='@island/folder.png' alt='The Pulpit Rock')
+                  figcaption.header__xl 220
+                .header__s Concept & Idea
+              .stream__el.grid__align_v_end
+                figure(id="progress_02")
+                  img(src='@island/shield.png' alt='The Pulpit Rock')
+                  figcaption.header__xl 190
+                .header__s Installation Guide
+  .spacer
+  section
+    .grid.grid__fixed
+      .grid.grid__template_2_3
+        .grid__block_l
+          .header
+            .header__s.text__l
+              span.header__xl.base__block +10000 
+              | Progress
+            p.text There are many variations of passages of Lorem Ipsum available. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
           .achievement
-            .numb +10000
-            .header__l Progress
-            p There are many variations of passages of Lorem Ipsum available. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
-            .header__m Basic
-            p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
-        .wrapper__right
+            .stream.grid__wrapper
+              .stream__el
+                figure
+                  img(src='@island/achiv__00.png' alt='The Pulpit Rock')
+          .header
+            .header__m.text__l Basic
+            p.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+        .grid__block_r.grid__align_v_end
           .slider
+            .base__center
+              img(src='@island/iphone_04.png' alt='The Pulpit Rock')
+            .base__center
+              img(src='@island/iphone_02.png' alt='The Pulpit Rock')
+            .base__center
+              img(src='@island/iphone_03.png' alt='The Pulpit Rock')
   section
-      .wrapper
-        .wrapper__left
-
-        .wrapper__right
-          .header__l Service for you need
-          .header__m How our app works
-          p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-          .stream
-            .stream__el
-              a(href="javascript:void(#)")
-                img(src='#' alt='The Pulpit Rock')
-            .stream__el
-              a(href="javascript:void(#)")
-                img(src='#' alt='The Pulpit Rock')
-            .stream__el
-              a(href="javascript:void(#)")
-                img(src='#' alt='The Pulpit Rock')
-          button
+    .grid.grid__fixed
+      .grid.grid__template_service
+        .grid__block_l
+          .wrapper__service  
+        .grid__block_r.text__l
+          .grid__template_4
+            .header__extra Service for you need
+            .header
+              .header__s How our app works
+              p.text.text__l There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+            .tabs
+              //- .stream.tab
+                //- .stream__el
+                //-   a(href="#one")
+                //-     img.image__s(src='@island/folder.png' alt='The Pulpit Rock')
+                //- .stream__el
+                //-   a(href="#two")
+                //-     img.image__s(src='@island/cloud_02.png' alt='The Pulpit Rock')
+                //- .stream__el
+                //-   a(href="#three")
+                //-     img.image__s(src='@island/comp_01.png' alt='The Pulpit Rock')
+              //- .tabs__content
+              //-   .stream
+              //-     .stream__el(id="one")
+              //-       p.text.text__l There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+              //-     .stream__el(id="two")
+              //-       p.text.text__l It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+              //-     .stream__el(id="three")
+              //-       p.text.text__l There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+              .stream.tabs__el
+                .stream__el
+                  a(href="javascript:void(#)", id="tab-1")
+                    img.image__s(src='@island/folder.png' alt='The Pulpit Rock')
+                .stream__el
+                  a(href="javascript:void(#)", id="tab-2")
+                    img.image__s(src='@island/cloud_02.png' alt='The Pulpit Rock')
+                .stream__el
+                  a(href="javascript:void(#)", id="tab-3")
+                    img.image__s(src='@island/comp_01.png' alt='The Pulpit Rock')
+              .tabs__content.stream
+                .stream__el(id="tab-1")
+                  p.text.text__l There are many variations of passages of Lorem Ipsum available. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                .stream__el(id="tab-2")
+                  p.text.text__l It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+                .stream__el(id="tab-3")
+                  p.text.text__lMany Desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. There are many variations of passages of Lorem Ipsum available.
+        div
+        div.text__l
+          .button.button_size_m.button_theme_gradient.button_type_weight
+            .button__text get trial
   section
-      .wrapper
-        .stream
+    .grid.grid__fixed
+      .grid.grid__plane
+        .header.header__m  Choose you plane
+        //- .header__s.base__block How our app works
+        .main.grid__wrapper.island__center
           .stream__el
             .plane
               .plane__header
-                figure
-                  img(src='#' alt='The Pulpit Rock')
-                .stream
-                  .stream__el
-                    .header__l
-                    p Best for individuals
-                  .stream__el
-                    .money $20
-              .plane__body
-                ul
-                  li 2 month free user service
-                  li 24 hours support device
-                .switch
-                button
+                //- figure
+                //-   img(src='@island/shield.png' alt='The Pulpit Rock')
+                .grid
+                  .grid__template_1_1
+                    .plane__name.text__l
+                      .header__s Basic
+                      p Best for individuals
+                    .plane__money.text__r
+                      span $20
+              .plane__wrapper
+                .plane__body
+                  div
+                    ul.plane__list
+                      li.plane__text 2 month free user service
+                      li.plane__text 24 hours support device
+                  label.switch
+                    input(type="checkbox")
+                    span.button.button_size_m.button_theme_switch.round
+                  div
+                    .button.button_size_m.button_theme_island.button_type_weight
+                      .button__text select plan
           .stream__el
             .plane
+              .plane__header
+                //- figure
+                //-   img(src='@island/shield.png' alt='The Pulpit Rock')
+                .grid
+                  .grid__template_1_1
+                    .plane__name.text__l
+                      .header__s Basic
+                      p Best for individuals
+                    .plane__money.text__r
+                      span $20
+              .plane__wrapper
+                .plane__body
+                  div
+                    ul.plane__list
+                      li.plane__text 2 month free user service
+                      li.plane__text 24 hours support device
+                  label.switch
+                    input(type="checkbox")
+                    span.button.button_size_m.button_theme_switch.round
+                  div
+                    .button.button_size_m.button_theme_island.button_type_weight
+                      .button__text select plan
           .stream__el
+            .plane
+              .plane__header
+                //- figure
+                //-   img(src='@island/shield.png' alt='The Pulpit Rock')
+                .grid
+                  .grid__template_1_1
+                    .plane__name.text__l
+                      .header__s Basic
+                      p Best for individuals
+                    .plane__money.text__r
+                      span $20
+              .plane__wrapper
+                .plane__body
+                  div
+                    ul.plane__list
+                      li.plane__text 2 month free user service
+                      li.plane__text 24 hours support device
+                  label.switch
+                    input(type="checkbox")
+                    span.button.button_size_m.button_theme_switch.round
+                  div
+                    .button.button_size_m.button_theme_island.button_type_weight
+                      .button__text select plan
   section
-      .wrapper
-        .wrapper__left
-          .header__l Get App Now !
-          p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-          .play
-        .wrapper__right
-          figure
-            img(src='#' alt='The Pulpit Rock')
+    .grid.wrapper
+      .grid
+        .form
+          .form__bgc
+            .form__wrap
+              .header__s Frequently Asked Questions
+              .form__block
+                .form__group
+                  .form__label First Name
+                  input.form__input(type="text" placeholder="John")
+                .form__group
+                  .form__label Second Name
+                  input.form__input(type="text" placeholder="John")
+                .form__group
+                  .form__label Second Name
+                  textarea.form__textarea(rows="10" cols="45" name="text")
+                .form__group
+                  .form__button
+                    .button.button_size_m.button_theme_island.button_type_weight
+                      .button__text send
+            .spacer
   section
-      .header__m Million Clients trust our service.
-      p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-      .wrapper
-        .wrapper__left
-          +ul(['Introducing Theme', 'Future', 'Plane', 'Subscribe'])
-        .wrapper__right
-          .play
-          +ul(['','','',''], 'img')(class="social")
-          
+    .grid.wrapper
+      .wrapper__img
+        .grid.grid__fixed
+          .grid.grid__template_app
+            .grid__block_l.text__l.grid__align_v_center
+              div
+                .header__s Get App Now !
+                p.text.text__vh There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                .play
+            .grid__block_r
+              .wrapper__app
+              //- div
+              //-   figure
+              //-     img.base__center(src='@island/ipad_00.png' alt='The Pulpit Rock')
+  .spacer
+  section
+    .grid.grid__fixed
+      .grid.grid__template_3_4
+        .header.header__m Million Clients trust our service.
+        p.text.text__c.subtitle There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+        .main
+          span.input.input_theme_app.input_size_xl
+            span.input__box
+              input(placeholder="email",type="text").input__control
+              .button.button_size_l.button_theme_island.button_type_weight
+                .button__text sign
+  section.footer
+    .grid.grid__footer
+      .grid.grid__template_1_1
+        .grid__block_l.text__l
+          .header__s Introducing Theme
+          ul
+            li.plane__text 
+              a(href="javascript:void(#)") Future
+            li.plane__text 
+              a(href="javascript:void(#)") Plane
+            li.plane__text 
+              a(href="javascript:void(#)") Subscribe
+          //- +ul(['Future', 'Plane', 'Subscribe'])(class="nav__menu")
+        .grid__block_r.text__r
+          .footer__el
+            .play
+              .stream.nav__menu
+                .stream__el
+                  a(href="javascript:void(#)")
+                    figure
+                      img.base__center(src='@island/apple.png' alt='The Pulpit Rock')
+                .stream__el
+                  a(href="javascript:void(#)")
+                    figure
+                      img.base__center(src='@island/google.png' alt='The Pulpit Rock')
+                //- figure
+                //-   img.base__center(src='@island/apple.png' alt='The Pulpit Rock')
+                //- figure
+                //-   img.base__center(src='@island/google.png' alt='The Pulpit Rock')
+            .social
+              .stream.nav__menu
+                .stream__el
+                  a(href="javascript:void(#)")
+                    img.image__l(src='@island/007-vimeo_01.png' alt='The Pulpit Rock')
+                .stream__el
+                  a(href="javascript:void(#)")
+                    img.image__l(src='@island/009-tumblr.png' alt='The Pulpit Rock')
+                .stream__el
+                  a(href="javascript:void(#)")
+                    img.image__l(src='@island/038-envato_01.png' alt='The Pulpit Rock')
+                .stream__el
+                  a(href="javascript:void(#)")
+                    img.image__l(src='@island/047-behance_01.png' alt='The Pulpit Rock')
+              //- +ul(['','','',''], 'img')(class="social")    
+      .grid.grid__template_1_2
+        .footer__bottom
+          .spacer__brd
+          .footer__copyright
+            p © 2020 App. All Rights Reserved
+  <!-- BEMGO:scripts -->      

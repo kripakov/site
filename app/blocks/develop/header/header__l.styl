@@ -1,0 +1,66 @@
+@-webkit-keyframes reveal
+	0%
+		opacity 0
+		-webkit-transform translateY(0)
+		-moz-transform translateY(0)
+		-o-transform translateY(0)
+		transform translateY(0)
+	100%
+		opacity 1
+		-webkit-transform translateY(100%)
+		-moz-transform translateY(100%)
+		-o-transform translateY(100%)
+		transform translateY(100%)
+		
+@keyframes reveal
+	0%
+		opacity 0
+		-webkit-transform translateY(0)
+		-moz-transform translateY(0)
+		-o-transform translateY(0)
+		transform translateY(0)
+	100%
+		opacity 1
+		-webkit-transform translateY(20%)
+		-moz-transform translateY(20%)
+		-o-transform translateY(20%)
+		transform translateY(20%)
+		
+.header__l
+	font-size $c_text_l
+	font-weight $f_weight
+	font-family $f_family
+	color $c_text_origin
+	-webkit-animation reveal 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+	-moz-animation reveal 2.5s ease-in 1 normal forwards
+	-o-animation reveal 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+	animation reveal 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+	
+.grid
+	.header__l
+		&:nth-child(1)
+			-webkit-animation-delay 0
+			-moz-animation-delay 0
+			-o-animation-delay 0
+			animation-delay 0
+.grid
+	.header__l
+		&:nth-child(2)
+			-webkit-animation-delay 500ms
+			-moz-animation-delay 500ms
+			-o-animation-delay 500ms
+			animation-delay 500ms
+.grid
+	.header__l
+		&:nth-child(3)
+			-webkit-animation-delay 800ms
+			-moz-animation-delay 800ms
+			-o-animation-delay 800ms
+			animation-delay 800ms
+
+@media only screen and (max-width:1440px)
+	.header__l
+		font-size 86px
+@media only screen and (max-width:1200px)
+	.header__l
+		font-size 82px

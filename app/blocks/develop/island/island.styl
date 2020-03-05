@@ -1,0 +1,30 @@
+.island
+	position relative
+.island:hover
+	-webkit-box-shadow 0px 10px 25px 5px rgba(211,224,216,1)
+	-moz-box-shadow 0px 10px 25px 5px rgba(211,224,216,1)
+	box-shadow 0px 10px 25px 5px rgba(211,224,216,1)
+	-webkit-transition box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out
+  -moz-transition box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out
+  -o-transition box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out
+	transition box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out
+	background-color #d3e0d8
+.island figcaption
+	font-family $f_family, sans-serif
+	font-size $c_text_m
+	font-weight 100
+	color $c_text_origin
+.island span
+	position absolute
+	bottom 0
+	display block
+	width 390px
+	margin 20px auto 
+	left 0
+	right 0
+.island img
+	margin 0 auto
+
+@media only screen and (max-width:1390px)
+	.island span
+		width 300px

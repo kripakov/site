@@ -1,0 +1,31 @@
+temp = '.grid__template_1_3'
+
+{temp}
+	display grid
+	width 100%
+	grid-template-areas "burger ul app"
+	grid-template-rows 220px
+	grid-template-columns 2fr 4fr 2fr
+	align-items center
+{temp} .burger
+	grid-area burger
+{temp} ul
+	grid-area ul
+{temp} .get
+	grid-area app
+	
+@media only screen and (max-width:1800px)
+	{temp}
+		grid-template-columns 0.5fr 4fr 2fr
+@media only screen and (max-width:1600px)
+	{temp}
+		grid-template-columns 0.5fr 4fr 2fr
+@media only screen and (max-width:1440px)
+	{temp}
+		grid-template-columns 0.5fr 3fr 1fr
+@media only screen and (max-width:1200px)
+	{temp}
+		grid-template-columns 0.5fr 5fr 1fr
+// @media only screen and (max-width:992px)
+
+// @media only screen and (max-width:768px)

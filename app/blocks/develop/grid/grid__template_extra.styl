@@ -1,0 +1,34 @@
+.grid__template_extra
+	display grid
+	width 100%
+	grid-template-columns repeat(3, 3fr)
+	grid-template-rows 15px 550px
+	grid-template-areas ". prop ."\
+											"left prop right"
+.grid__template_extra .spacer
+		grid-area spacer
+		height 150px
+.grid__template_extra .grid__block_l
+	grid-area left
+.grid__template_extra .prop
+	grid-area prop	
+.grid__template_extra .grid__block_r
+	grid-area right										
+// .grid__template_extra .stream__1
+// 	grid-area 1
+// .grid__template_extra .stream__2
+// 	grid-area 2
+// .grid__template_extra .stream__3
+// 	grid-area 3
+// .grid__template_extra .stream__4
+// 	grid-area 4
+// .grid__template_extra .prop
+// 	grid-area prop
+// .grid__template_extra .stream__5
+// 	grid-area 5
+// .grid__template_extra .stream__6
+// 	grid-area 6
+// .grid__template_extra .stream__7
+// 	grid-area 7
+// .grid__template_extra .stream__8
+// 	grid-area 8

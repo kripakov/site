@@ -1,0 +1,93 @@
+temp = '.header__m'
+
+
+.fadeInLeft 
+	-webkit-animation-name fadeInLeft
+	animation-name fadeInLeft
+	
+.fadeInRight
+	-webkit-animation-name fadeInRight
+	animation-name fadeInRight
+	
+.fadeUpIn
+	-webkit-animation-name fadeUpIn
+	animation-name fadeUpIn
+@-webkit-keyframes fadeUpIn
+	0% 
+		opacity 0
+		-webkit-transform translateY(0)
+		-moz-transform translateY(0)
+		-o-transform translateY(0)
+		transform translateY(0)
+	100% 
+		opacity 1
+		-webkit-transform translateY(100%)
+		-moz-transform translateY(100%)
+		-o-transform translateY(100%)
+		transform translateY(100%)
+@keyframes fadeUpIn
+	0% 
+		opacity 0
+		-webkit-transform translateY(0)
+		-moz-transform translateY(0)
+		-o-transform translateY(0)
+		transform translateY(0)
+	100% 
+		opacity 1
+		-webkit-transform translateY(20%)
+		-moz-transform translateY(20%)
+		-o-transform translateY(20%)
+		transform translateY(20%)
+		
+
+@keyframes fadeInLeft
+	0%
+		opacity 0
+		-webkit-transform translate3d(-20%,0,0)
+		transform translate3d(-20%,0,0)
+	100%
+		opacity 1
+		-webkit-transform none
+		transform none
+
+@keyframes fadeInRight
+	0%
+		opacity 0
+		-webkit-transform translate3d(20%,0,0)
+		transform translate3d(20%,0,0)
+	100%
+		opacity 1
+		-webkit-transform none
+		transform none
+		
+
+{temp}
+	font-size $c_text_m
+	font-family $f_family
+	font-weight $f_weight
+	color $c_text_origin
+	width 1300px
+	margin 0 auto
+	
+// .grid
+// 	{temp}
+// 		&:nth-child(1)
+// 			-webkit-animation fadeInLeft 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+// 			-moz-animation fadeInLeft 2.5s ease-in 1 normal forwards
+// 			-o-animation fadeInLeft 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+// 			animation fadeInLeft 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+.grid
+	{temp}
+		&:nth-child(2)
+			-webkit-animation fadeInRight 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+			-moz-animation fadeInRight 2.5s ease-in 1 normal forwards
+			-o-animation fadeInRight 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+			animation fadeInRight 2.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+			
+@media only screen and (max-width:1440px)
+	{temp}
+		width 85%
+@media only screen and (max-width:1390px)
+	{temp}
+		width 85%
+		
