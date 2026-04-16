@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "bxslider": "^4.2.14",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "progressbar.js": "^1.1.0"
   }
 }
